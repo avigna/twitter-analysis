@@ -49,42 +49,13 @@ class pythonProgramOptions:
     # query = '\" TEXT \"'
     query = '\" (#MéxicoChingón OR #MexicanosChingones OR nación mexicana OR mexicanidad OR pueblo mexicano OR ((mexicana OR mexicanas OR mexicano OR mexicanos OR #mexicana OR #mexicanas OR #mexicano OR #mexicanos) (la forma de ser de OR sentimiento de unidad OR somos unidos OR estamos unidos OR nos motiva OR aspiraciones OR lecciones OR lugar que ocupamos OR lugar que ocupan OR chingones OR chingonas OR creativos OR creativas OR muy inteligentes OR desmadrosos OR desmadrosas OR motivados por OR el pueblo OR efectos sociales en México OR efectos políticos en México OR efectos económicos en México)) OR ((la política en OR la economía en OR la salud en OR las relaciones internacionales en OR la seguridad en OR la educación en OR el bienestar en OR el turismo en OR la cultura en OR la situación actual en) (México OR #México))) -RT \"'
     start_time = '2021-04-01T00:00'
-    end_time = '2021-04-01T00:10'
-    # end_time = '2021-04-11T00:00'
+    end_time = '2021-04-11T00:00'
     tweet_fields = 'created_at'
     filename_prefix = 'Narrativa_Busqueda1_crossTest'
 
-    # outputData = 'DataTest1.txt'
-
-    logfile_common_envelopes       = None
-
-    # def booleanChoices(self):
-    #     booleanChoices = [
-    #         self.enable_warnings
-    #     ]
-
-    #     return booleanChoices
-
-    # def booleanCommands(self):
-    #     booleanCommands = [
-    #         '--enable-warnings'
-    #     ]
-
-    #     return booleanCommands
-
-    # def numericalChoices(self):
-    #     numericalChoices = [
-    #         self.number_of_systems
-    #     ]
-
-    #     return numericalChoices
-
-    # def numericalCommands(self):
-    #     numericalCommands = [
-    #         '--number-of-systems'
-    #     ]
-
-    #     return numericalCommands
+    queryString = filename_prefix+"_query.txt"
+    with open(queryString, "w") as text_file:
+        text_file.write("%s" % query)
 
     def stringChoices(self):
         stringChoices = [
@@ -110,31 +81,9 @@ class pythonProgramOptions:
 
         return stringCommands
 
-    # def listChoices(self):
-    #     listChoices = [
-    #         self.log_classes,
-    #         self.debug_classes
-    #     ]
-
-    #     return listChoices
-
-    # def listCommands(self):
-    #     listCommands = [
-    #         '--log-classes',
-    #         '--debug-classes'
-    #     ]
-
-        # return listCommands
-
 
     def generateCommandLineOptionsDict(self):
         """
-        This function generates a dictionary mapping COMPAS options to their specified 
-        values (or empty strings for boolean options). These can be combined into a string
-        and run directly as a terminal command, or passed to the stroopwafel interface
-        where some of them may be overwritten. Options not to be included in the command 
-        line should be set to pythons None (except booleans, which should be set to False)
-    
         Parameters
         -----------
         self : pythonProgramOptions
@@ -144,46 +93,18 @@ class pythonProgramOptions:
         --------
         commands : str or list of strs
         """
-        # booleanChoices = self.booleanChoices()
-        # booleanCommands = self.booleanCommands()
-        # nBoolean = len(booleanChoices)
-        # assert len(booleanCommands) == nBoolean
-    
-        # numericalChoices = self.numericalChoices()
-        # numericalCommands = self.numericalCommands()
-        # nNumerical = len(numericalChoices)
-        # assert len(numericalCommands) == nNumerical
     
         stringChoices = self.stringChoices()
         stringCommands = self.stringCommands()
         nString = len(stringChoices)
         assert len(stringCommands) == nString
     
-        # listChoices = self.listChoices()
-        # listCommands = self.listCommands()
-        # nList = len(listChoices)
-        # assert len(listCommands) == nList
-
-
         ### Collect all options into a dictionary mapping option name to option value
 
         command = {'executable' : self.executable}
-    
-        # for i in range(nBoolean):
-        #     if booleanChoices[i] == True:
-        #         command.update({booleanCommands[i] : ''})
-    
-        # for i in range(nNumerical):
-        #     if not numericalChoices[i] == None:
-        #         command.update({numericalCommands[i] : str(numericalChoices[i])})
-    
         for i in range(nString):
             if not stringChoices[i] == None:
                 command.update({stringCommands[i] : stringChoices[i]})
-    
-        # for i in range(nList):
-        #     if listChoices[i]:
-        #         command.update({listCommands[i] : ' '.join(map(str,listChoices[i]))})
     
         return command
 
