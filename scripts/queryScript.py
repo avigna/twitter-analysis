@@ -50,7 +50,7 @@ class pythonProgramOptions:
     query = '\" (#MéxicoChingón OR #MexicanosChingones OR nación mexicana OR mexicanidad OR pueblo mexicano OR ((mexicana OR mexicanas OR mexicano OR mexicanos OR #mexicana OR #mexicanas OR #mexicano OR #mexicanos) (la forma de ser de OR sentimiento de unidad OR somos unidos OR estamos unidos OR nos motiva OR aspiraciones OR lecciones OR lugar que ocupamos OR lugar que ocupan OR chingones OR chingonas OR creativos OR creativas OR muy inteligentes OR desmadrosos OR desmadrosas OR motivados por OR el pueblo OR efectos sociales en México OR efectos políticos en México OR efectos económicos en México)) OR ((la política en OR la economía en OR la salud en OR las relaciones internacionales en OR la seguridad en OR la educación en OR el bienestar en OR el turismo en OR la cultura en OR la situación actual en) (México OR #México))) -RT \"'
     start_time = '2021-04-01T00:00'
     end_time = '2021-04-11T00:00'
-    tweet_fields = 'created_at'
+    tweet_fields = '\"created_at,author_id\"'
     filename_prefix = 'Narrativa_Busqueda1_crossTest'
     printCommand = ''
 
