@@ -52,6 +52,7 @@ class pythonProgramOptions:
     end_time = '2021-04-11T00:00'
     tweet_fields = 'created_at'
     filename_prefix = 'Narrativa_Busqueda1_crossTest'
+    printCommand = ''
 
     queryString = filename_prefix+"_query.txt"
     with open(queryString, "w") as text_file:
@@ -64,7 +65,8 @@ class pythonProgramOptions:
             self.start_time,
             self.end_time,
             self.tweet_fields,
-            self.filename_prefix
+            self.filename_prefix,
+            self.printCommand
         ]
 
         return stringChoices
@@ -76,7 +78,8 @@ class pythonProgramOptions:
             '--start-time',
             '--end-time',
             '--tweet-fields',
-            '--filename-prefix'        
+            '--filename-prefix',
+            '--no-print-stream'
         ]
 
         return stringCommands
