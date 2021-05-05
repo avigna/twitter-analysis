@@ -1,0 +1,2 @@
+nohup python3 -u ./queryScript.py > output.log &
+
