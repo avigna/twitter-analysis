@@ -1,1 +1,0 @@
-nohup ./twarcScript.sh > output.log &
