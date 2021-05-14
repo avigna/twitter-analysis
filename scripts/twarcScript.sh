@@ -1,29 +1,32 @@
 #!/bin/bash
 
+# Command to run in the background
 # nohup ./twarcScript.sh > output.log &
+
+# START CRONOMETER
 start=$SECONDS
 
-# Query
+# QUERY
 queryString="(\"Kendrick Lamar\" (😍 OR 😘)) -is:retweet"
 queryString=$queryString
-echo "Query: $queryString"
+echo "Query:"
+echo "$queryString"
 echo
 
-# Timeframe
+# TIMEFRAME
 # Either "test", "date" or "archive"
 timeframeOption="test"
-# If useing timeframeOption="date", specify the following:
+# If using timeframeOption="date", specify:
 startTimeString="2021-01-01T00:00:00"
 endTimeString="2021-04-01T00:00:00"
 
+# FILENAME
+fileNameString="testRT.jsonl" # Ignored when timeframeOption="test"
 
-# Filename (if not testing)
-fileNameString="testRT.jsonl"
-
-# Twarc search
+# TWARC SEARCH
 if [ $timeframeOption == "test" ]
 then
-   echo $testString
+   echo "Timeframe: test"
    twarc2 search "$queryString" \
   --archive \
   --flatten \
@@ -33,7 +36,7 @@ then
 
 elif [ $timeframeOption == "date" ]
 then
-   echo $testString
+   echo "Timeframe: date"
    twarc2 search "$queryString" \
   --archive \
   --flatten \
@@ -42,7 +45,7 @@ then
   > $fileNameString
 elif [ $timeframeOption == "archive" ]
 then
-   echo $archiveString
+   echo "Timeframe: archive"
    twarc2 search "$queryString" \
   --archive \
   --flatten \
@@ -51,7 +54,6 @@ else
    echo "None of the condition met"
 fi
 
-# Printing
-echo "Timeframe:"
+# TIME
 duration=$(( SECONDS - start ))
-echo $duration
+echo "Running time: $duration s"
