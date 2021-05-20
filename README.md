@@ -1,4 +1,4 @@
-# socialMedia-Analysis
+# twitter-analysis
 
 ## Overview
 The purpose of this public repository is to do collection and analysis of Twitter data.
