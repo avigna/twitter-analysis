@@ -3,9 +3,9 @@
 ## Overview
 The purpose of this public repository is to do collection and analysis of Twitter data.
 In the current version, the repository consists uniquely on scripts that search and save Tweets in .jsonl format. 
-For that we can use two packages:
-  - [Twarc2](https://twarc-project.readthedocs.io/en/latest/twarc2/): this package, which we suggest to use as default, can be used to make Tweet queries using the shell script /twitter-analysis/scripts/twarcScript.sh.
-  - [searchtweets-v2](https://pypi.org/project/searchtweets-v2/): alternatively, this package can be used to make Tweet queries using the python scripts in /twitter-analysis/scripts/searchtweets/. However, it has been proven to be less reliable than other packages, and might be soon deprecated and deleted. For now, we keep it as an alternative.
+For that we will need to install one of the following two packages:
+  - [Twarc2](https://twarc-project.readthedocs.io/en/latest/twarc2/): this package, which we suggest to use as default, need to be installed in order to make Tweet queries using the shell script /twitter-analysis/scripts/twarcScript.sh.
+  - [searchtweets-v2](https://pypi.org/project/searchtweets-v2/): alternatively, this package can be installed to make Tweet queries using the python scripts in /twitter-analysis/scripts/searchtweets/. However, it has been proven to be less reliable than other packages, and might be soon deprecated and deleted. For now, we keep it as an alternative.
 
 Additionally, the file /twitter-analysis/scripts/readJsonlFiles.ipynb is a jupyter notebook to make quick searches and queries through any .jsonl file.
 
