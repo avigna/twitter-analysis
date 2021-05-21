@@ -27,6 +27,7 @@ Some examples of a query, which will be in quote marks, are the following:
 1. The AND operator is included as a space, so the query "Kendrick AND Lamar" should be written as "Kendrick Lamar" or "(Kendrick) (Lamar)". Moreover, the parenthesis serve to cluster or isolate each element of the query, which is particularly useful for long queries.
 2. The OR operator is included literally and in caps, so the query "Superman or Batman" should be written as "Superman OR Batman" and, for better readibility "(Superman) OR (Batman)".
 3. The NOT operator in included as a dash, so the query "NOT happy"should be written as "-(happy)".
+4. Queries have to be composed of 1,024 characters or less.
 
 
 EXAMPLE 1: 
@@ -42,17 +43,22 @@ EXAMPLE 2:
 
 #### Query: "(\\"Kendrick Lamar\\" OR \\"Kanye West\\" OR \\"Jay-Z\\")"
 
-should look tweets that look for full phrases containing "Kendrick Lamar", "Kanye West" or "Jay-Z", and will avoid spelling correction. Note that, given that these phrases are inside the main-query quotation marks, any additional quotation marks that pile-up words need to have an inverted dash before the straight double commas. In other words, avoid any weirdly formatted, e.g., curly, quotation marks. Remember that all characters, but the main-query quotation marks, count in the 1024 character limit for a search query.
+should look tweets that look for full phrases containing "Kendrick Lamar", "Kanye West" or "Jay-Z", and will avoid spelling correction. Note that, given that these phrases are inside the main-query quotation marks, any additional quotation marks that pile-up words need to have an inverted dash before the straight double commas. In other words, avoid any weirdly formatted, e.g., curly, quotation marks. Remember that all characters, but the main-query quotation marks, count in the 1,024 character limit for a search query.
 
 There are additional Twitter search operators that can be used for specific purposes.
 
 EXAMPLE 3:
 
-#### Query: "(\\"Kendrick Lamar\\") (😍 OR 😘) (lang:es) (place_country:US) (-is:retweet)"
+#### Query: "(\\"Kendrick Lamar\\") (lang:es) (place_country:US) (-is:retweet)"
 
 should look for full phrases containing "Kendrick Lamar", that Twitter has classified to be in Spanish and located in the US, and that are not retweets.
 
+EXAMPLE 4:
 
+#### Query: "(\\"Kendrick Lamar\\" OR \\"Kanye West\\" OR \\"Jay-Z\\") (😍 OR 😘) (lang:es) (place_country:MX) (-is:retweet)"
+
+### How to use the /twitter-analysis/scripts/twarcScript.sh shell script?
+SECTION PENDING.
 
 ### Resources
 [Learn twarc](https://scholarslab.github.io/learn-twarc/): mostly for v1, but some overlap with v2. Hopefully a complete and robust documentation for v2 soon.
