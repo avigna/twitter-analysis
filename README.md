@@ -17,7 +17,9 @@ This means that a lot of the resources, tools and syntax that are commonly used 
 This might eventually be addressed by the developers, but it currently results in a warning for any user using this repository and any reference to resources based on v1.
 
 ### Resources
-https://scholarslab.github.io/learn-twarc/
+[Learn twarc](https://scholarslab.github.io/learn-twarc/): mostly for v1, but some overlap with v2. Hopefully a complete and robust documentation for v2 soon.
+
+[twittercommunity](https://twittercommunity.com/): forums of users discussing their experiences, questions, and solutions while data mining on Twitter.
 
 ### Queries: basics
 
