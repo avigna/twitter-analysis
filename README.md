@@ -25,6 +25,10 @@ https://twittercommunity.com/: forums of users discussing their experiences, que
 
 [Rules and Filtering](https://developer.twitter.com/en/docs/twitter-api/enterprise/rules-and-filtering/operators-by-product): rules and filters that are available for the Enterprise version of Twitter. Most of them probably work on Twarc2 with the Academic Research product track, or at least they don't throw an error. This is a very good resource for advanced searches, but, again, beware of compatibility.
 
+[Twitter advanced search](https://github.com/igorbrigadir/twitter-advanced-search): Igor Brigadir's through document with a list of operators and examples for Twitter queries. 
+
+[Geofenced Searches on Twitter: A Case Study Detailing South Asia’s Covid Crisis](https://www.bellingcat.com/resources/2021/05/19/geofenced-searches-on-twitter-a-case-study-detailing-south-asias-covid-crisis/): a nice article where some alternative approaches and tools are shown and discussed in some detail.
+
 ### Queries: basics
 
 ## Contact
