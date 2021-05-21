@@ -29,7 +29,7 @@ https://twittercommunity.com/: forums of users discussing their experiences, que
 
 [Geofenced Searches on Twitter: A Case Study Detailing South Asia’s Covid Crisis](https://www.bellingcat.com/resources/2021/05/19/geofenced-searches-on-twitter-a-case-study-detailing-south-asias-covid-crisis/): a nice article where some alternative approaches and tools are shown and discussed in some detail.
 
-### Queries: basics
+### Queries: basics 
 
 ## Contact
 Please email your comments, queries, and suggestions to: avignagomez@nbi.ku.dk
