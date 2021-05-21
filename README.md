@@ -9,6 +9,7 @@ For that we will need to install one of the following two packages:
 
 Additionally, the file /twitter-analysis/scripts/readJsonlFiles.ipynb is a jupyter notebook to make quick searches and queries through any .jsonl file.
 
+
 ## Queries: basics and resources
 This repository was created following the release of Twitter's [Academic Research product track](https://developer.twitter.com/en/solutions/academic-research).
 The main advantage or the Academic Research product track is that you get full access to archival data. 
@@ -29,7 +30,7 @@ Some examples of a query, which will be in quote marks, are the following:
 3. The NOT operator in included as a dash, so the query "NOT happy"should be written as "-(happy)".
 4. Queries have to be composed of 1,024 characters or less.
 
-
+---
 EXAMPLE 1: 
 
 #### Query: "(Kendrick OR Lamar) (Compton) -(BLM)" 
@@ -38,7 +39,7 @@ should look for tweets that include the words "Kendrick" or "Lamar" and the word
 
 The use of quote marks is very important in queries and needs to be correctly implemented to work in the current version of the /twitter-analysis/scripts/twarcScript.sh shell script. As shown in Ex. 1, the main query uses quote marks. However, the use of quote marks is useful to make string queries.
 
-
+---
 EXAMPLE 2: 
 
 #### Query: "(\\"Kendrick Lamar\\" OR \\"Kanye West\\" OR \\"Jay-Z\\")"
@@ -47,16 +48,19 @@ should look tweets that look for full phrases containing "Kendrick Lamar", "Kany
 
 There are additional Twitter search operators that can be used for specific purposes.
 
+---
 EXAMPLE 3:
 
 #### Query: "(\\"Kendrick Lamar\\") (lang:es) (place_country:US) (-is:retweet)"
 
 should look for full phrases containing "Kendrick Lamar", that Twitter has classified to be in Spanish and located in the US, and that are not retweets.
 
+---
 EXAMPLE 4:
 
 #### Query: "(\\"Kendrick Lamar\\" OR \\"Kanye West\\" OR \\"Jay-Z\\") (😍 OR 😘) (lang:es) (place_country:MX) (-is:retweet)"
 
+---
 ### How to use the /twitter-analysis/scripts/twarcScript.sh shell script?
 SECTION PENDING.
 
@@ -73,8 +77,10 @@ https://twittercommunity.com/: forums of users discussing their experiences, que
 
 [Geofenced Searches on Twitter: A Case Study Detailing South Asia’s Covid Crisis](https://www.bellingcat.com/resources/2021/05/19/geofenced-searches-on-twitter-a-case-study-detailing-south-asias-covid-crisis/): a nice article where some alternative approaches and tools are shown and discussed in some detail.
 
+
 ## Contact
 Please email your comments, queries, and suggestions to: avignagomez@nbi.ku.dk
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
