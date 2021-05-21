@@ -24,10 +24,9 @@ Boolean algebra uses operators AND, OR and NOT.
 These operators have a special syntax in Twarc.
 Some examples of a query, which will be in quote marks, are the following:
 
-The query "Kendrick AND Lamar" should be written as "Kendrick Lamar" or "(Kendrick) (Lamar)", where the space serves as the AND operator. Moreover, the parenthesis serve to cluster or isolate each element of the query, which is particularly useful for long queries.
-
-
-2, and therefore the way they should be included /twitter-analysis/scripts/twarcScript.sh, is not verbatim.
+1. The AND operator is included as a space, so the query "Kendrick AND Lamar" should be written as "Kendrick Lamar" or "(Kendrick) (Lamar)". Moreover, the parenthesis serve to cluster or isolate each element of the query, which is particularly useful for long queries.
+2. The OR operator is included literally and in caps, so the query "Superman or Batman" should be written as "Superman OR Batman" and, for better readibility "(Superman) OR (Batman)".
+3. The NOT operator
 
 ### Resources
 [Learn twarc](https://scholarslab.github.io/learn-twarc/): mostly for v1, but some overlap with v2. Hopefully a complete and robust documentation for v2 soon.
