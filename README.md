@@ -16,8 +16,10 @@ Twitter API v2 will eventually be a great tool, but it is currently under develo
 This means that a lot of the resources, tools and syntax that are commonly used in v1 are, currently, either not as robuts or not accessible at all.
 This might eventually be addressed by the developers, but it currently results in a warning for any user using this repository and any reference to resources based on v1.
 
-E.g.:
+### Resources
 https://scholarslab.github.io/learn-twarc/
+
+### Queries: basics
 
 ## Contact
 Please email your comments, queries, and suggestions to: avignagomez@nbi.ku.dk
