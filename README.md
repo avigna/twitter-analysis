@@ -15,3 +15,6 @@ https://scholarslab.github.io/learn-twarc/
 
 ## Contact
 Please email your queries to: avignagomez@nbi.ku.dk
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
