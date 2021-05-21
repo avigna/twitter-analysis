@@ -19,7 +19,11 @@ This might eventually be addressed by the developers, but it currently results i
 ### Resources
 [Learn twarc](https://scholarslab.github.io/learn-twarc/): mostly for v1, but some overlap with v2. Hopefully a complete and robust documentation for v2 soon.
 
-[twittercommunity](https://twittercommunity.com/): forums of users discussing their experiences, questions, and solutions while data mining on Twitter.
+https://twittercommunity.com/: forums of users discussing their experiences, questions, and solutions while data mining on Twitter.
+
+[Search Tweets](https://developer.twitter.com/en/docs/twitter-api/tweets/search/introduction): Twitter Developer official "get started" on how to search Tweets.
+
+[Rules and Filtering](https://developer.twitter.com/en/docs/twitter-api/enterprise/rules-and-filtering/operators-by-product): rules and filters that are available for the Enterprise version of Twitter. Most of them probably work on Twarc2 with the Academic Research product track, or at least they don't throw an error. This is a very good resource for advanced searches, but, again, beware of compatibility.
 
 ### Queries: basics
 
