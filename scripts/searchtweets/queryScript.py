@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+
+# Command to run in the background:
+# nohup python3 -u ./queryScript.py > output.log &
+
+
 import numpy as np
 import subprocess
 import sys
