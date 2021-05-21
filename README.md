@@ -28,7 +28,11 @@ Some examples of a query, which will be in quote marks, are the following:
 2. The OR operator is included literally and in caps, so the query "Superman or Batman" should be written as "Superman OR Batman" and, for better readibility "(Superman) OR (Batman)".
 3. The NOT operator in included as a dash, so the query "NOT happy"should be written as "-(happy)".
 
-Example 1: "(Kendrick OR Lamar) (Compton) -(BLM)" should look for tweets that include the words "Kendrick" or "Lamar" and the word "Compton" but not the acronym "BLM".
+EXAMPLE 1: "(Kendrick OR Lamar) (Compton) -(BLM)" should look for tweets that include the words "Kendrick" or "Lamar" and the word "Compton" but not the acronym "BLM".
+
+The use of quote marks is very important in queries and needs to be correctly implemented to work in the current version of the /twitter-analysis/scripts/twarcScript.sh shell script. As shown in Ex. 1, the main query uses quote marks. However, the use of quote marks is useful to make string queries.
+
+EXAMPLE 2: "(\"Kendrick Lamar\" OR \"Kanye West\" OR \"Jay-Z\") (Compton) -(BLM)"
 
 
 ### Resources
