@@ -4,8 +4,9 @@
 The purpose of this public repository is to do collection and analysis of Twitter data.
 In the current version, the repository consists uniquely on scripts that search and save Tweets in .jsonl format. 
 For that we can use two packages:
-  - [searchtweets-v2](https://pypi.org/project/searchtweets-v2/)
-  - [Twarc2](https://twarc-project.readthedocs.io/en/latest/twarc2/)
+  - [Twarc2](https://twarc-project.readthedocs.io/en/latest/twarc2/): this package can be used to make Tweet queries using the shell script /twitter-analysis/scripts/twarcScript.sh. We suggest to use Twarc2 as a default for any queries on Twitter. 
+  - [searchtweets-v2](https://pypi.org/project/searchtweets-v2/): this package can be used to make Tweet queries using the python scripts in /twitter-analysis/scripts/searchtweets/. However, it has been proven to be less reliable than other packages, and might be soon deprecated and deleted. For now, we keep it as an alternative.
+
 
 ## Queries: basics and resources
 This repository was created following the release of Twitter's [Academic Research product track](https://developer.twitter.com/en/solutions/academic-research).
