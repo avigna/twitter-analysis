@@ -26,7 +26,10 @@ Some examples of a query, which will be in quote marks, are the following:
 
 1. The AND operator is included as a space, so the query "Kendrick AND Lamar" should be written as "Kendrick Lamar" or "(Kendrick) (Lamar)". Moreover, the parenthesis serve to cluster or isolate each element of the query, which is particularly useful for long queries.
 2. The OR operator is included literally and in caps, so the query "Superman or Batman" should be written as "Superman OR Batman" and, for better readibility "(Superman) OR (Batman)".
-3. The NOT operator
+3. The NOT operator in included as a dash, so the query "NOT happy"should be written as "-(happy)".
+
+Example 1: "(Kendrick OR Lamar) (Compton) -(BLM)" should look for tweets that include the words "Kendrick" or "Lamar" and the word "Compton" but not the acronym "BLM".
+
 
 ### Resources
 [Learn twarc](https://scholarslab.github.io/learn-twarc/): mostly for v1, but some overlap with v2. Hopefully a complete and robust documentation for v2 soon.
