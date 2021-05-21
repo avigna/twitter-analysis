@@ -28,11 +28,30 @@ Some examples of a query, which will be in quote marks, are the following:
 2. The OR operator is included literally and in caps, so the query "Superman or Batman" should be written as "Superman OR Batman" and, for better readibility "(Superman) OR (Batman)".
 3. The NOT operator in included as a dash, so the query "NOT happy"should be written as "-(happy)".
 
-EXAMPLE 1: "(Kendrick OR Lamar) (Compton) -(BLM)" should look for tweets that include the words "Kendrick" or "Lamar" and the word "Compton" but not the acronym "BLM".
+
+EXAMPLE 1: 
+
+#### Query: "(Kendrick OR Lamar) (Compton) -(BLM)" 
+
+should look for tweets that include the words "Kendrick" or "Lamar" and the word "Compton" but not the acronym "BLM".
 
 The use of quote marks is very important in queries and needs to be correctly implemented to work in the current version of the /twitter-analysis/scripts/twarcScript.sh shell script. As shown in Ex. 1, the main query uses quote marks. However, the use of quote marks is useful to make string queries.
 
-EXAMPLE 2: "(\"Kendrick Lamar\" OR \"Kanye West\" OR \"Jay-Z\") (Compton) -(BLM)"
+
+EXAMPLE 2: 
+
+#### Query: "(\\"Kendrick Lamar\\" OR \\"Kanye West\\" OR \\"Jay-Z\\")"
+
+should look tweets that look for full phrases containing "Kendrick Lamar", "Kanye West" or "Jay-Z", and will avoid spelling correction. Note that, given that these phrases are inside the main-query quotation marks, any additional quotation marks that pile-up words need to have an inverted dash before the straight double commas. In other words, avoid any weirdly formatted, e.g., curly, quotation marks. Remember that all characters, but the main-query quotation marks, count in the 1024 character limit for a search query.
+
+There are additional Twitter search operators that can be used for specific purposes.
+
+EXAMPLE 3:
+
+#### Query: "(\\"Kendrick Lamar\\") (😍 OR 😘) (lang:es) (place_country:US) (-is:retweet)"
+
+should look for full phrases containing "Kendrick Lamar", that Twitter has classified to be in Spanish and located in the US, and that are not retweets.
+
 
 
 ### Resources
