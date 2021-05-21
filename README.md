@@ -21,6 +21,13 @@ This might eventually be addressed by the developers, but it currently results i
 ### Basics
 Tweet searches, like most other searches and query services, and arguably most of modern computing, rely on the foundations of [Boolean algebra](https://en.wikipedia.org/wiki/Boolean_algebra).
 Boolean algebra uses operators AND, OR and NOT.
+These operators have a special syntax in Twarc.
+Some examples of a query, which will be in quote marks, are the following:
+
+The query "Kendrick AND Lamar" should be written as "Kendrick Lamar" or "(Kendrick) (Lamar)", where the space serves as the AND operator. Moreover, the parenthesis serve to cluster or isolate each element of the query, which is particularly useful for long queries.
+
+
+2, and therefore the way they should be included /twitter-analysis/scripts/twarcScript.sh, is not verbatim.
 
 ### Resources
 [Learn twarc](https://scholarslab.github.io/learn-twarc/): mostly for v1, but some overlap with v2. Hopefully a complete and robust documentation for v2 soon.
