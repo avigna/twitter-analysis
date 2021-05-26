@@ -61,6 +61,13 @@ EXAMPLE 4:
 #### Query: "(\\"Kendrick Lamar\\" OR \\"Kanye West\\" OR \\"Jay-Z\\") (😍 OR 😘) (lang:es) (place_country:MX) (-is:retweet)"
 
 ---
+### Tips
+  - You only have 1,024 characters available for each query.
+  - If in doubt, always use parentheses to encompass terms. However, beware that parentheses takes 2 characters.
+  - Remember that, in this implementation of the searching script, quotation marks take 2 characters rather than 1; this is because you need to use a backslash ("\\") before the quotation marks. This is true except for the main-query quotation marks.
+  - In order to save characters, don't use quotation marks on individual words.
+
+---
 ### How to use the /twitter-analysis/scripts/twarcScript.sh shell script?
 SECTION PENDING.
 
