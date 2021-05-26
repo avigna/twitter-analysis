@@ -28,10 +28,16 @@ Some examples of a query, which will be in quote marks, are the following:
 1. The AND operator is included as a space, so the query "Kendrick AND Lamar" should be written as "Kendrick Lamar" or "(Kendrick) (Lamar)". Moreover, the parenthesis serve to cluster or isolate each element of the query, which is particularly useful for long queries.
 2. The OR operator is included literally and in caps, so the query "Superman or Batman" should be written as "Superman OR Batman" and, for better readibility "(Superman) OR (Batman)".
 3. The NOT operator in included as a dash, so the query "NOT happy"should be written as "-(happy)".
-4. Queries have to be composed of 1,024 characters or less.
 
+### Tips
+  - You only have 1,024 characters available for each query.
+  - If in doubt, always use parentheses to encompass terms. However, beware that parentheses takes 2 characters.
+  - Remember that, in this implementation of the searching script, quotation marks take 2 characters rather than 1; this is because you need to use a backslash ("\\") before the quotation marks. This is true except for the main-query quotation marks.
+  - In order to save characters, don't use quotation marks on individual words.
+
+### Examples
 ---
-EXAMPLE 1: 
+Example 1: 
 
 #### Query: "(Kendrick OR Lamar) (Compton) -(BLM)" 
 
@@ -40,7 +46,7 @@ should look for tweets that include the words "Kendrick" or "Lamar" and the word
 The use of quote marks is very important in queries and needs to be correctly implemented to work in the current version of the /twitter-analysis/scripts/twarcScript.sh shell script. As shown in Ex. 1, the main query uses quote marks. However, the use of quote marks is useful to make string queries.
 
 ---
-EXAMPLE 2: 
+Example 2: 
 
 #### Query: "(\\"Kendrick Lamar\\" OR \\"Kanye West\\" OR \\"Jay-Z\\")"
 
@@ -49,23 +55,16 @@ should look tweets that look for full phrases containing "Kendrick Lamar", "Kany
 There are additional Twitter search operators that can be used for specific purposes.
 
 ---
-EXAMPLE 3:
+Example 3:
 
 #### Query: "(\\"Kendrick Lamar\\") (lang:es) (place_country:US) (-is:retweet)"
 
 should look for full phrases containing "Kendrick Lamar", that Twitter has classified to be in Spanish and located in the US, and that are not retweets.
 
 ---
-EXAMPLE 4:
+Example 4:
 
 #### Query: "(\\"Kendrick Lamar\\" OR \\"Kanye West\\" OR \\"Jay-Z\\") (😍 OR 😘) (lang:es) (place_country:MX) (-is:retweet)"
-
----
-### Tips
-  - You only have 1,024 characters available for each query.
-  - If in doubt, always use parentheses to encompass terms. However, beware that parentheses takes 2 characters.
-  - Remember that, in this implementation of the searching script, quotation marks take 2 characters rather than 1; this is because you need to use a backslash ("\\") before the quotation marks. This is true except for the main-query quotation marks.
-  - In order to save characters, don't use quotation marks on individual words.
 
 ---
 ### How to use the /twitter-analysis/scripts/twarcScript.sh shell script?
