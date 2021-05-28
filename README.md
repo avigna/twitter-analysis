@@ -34,6 +34,7 @@ Some examples of a query, which will be in quote marks, are the following:
   - If in doubt, always use parentheses to encompass terms. However, beware that parentheses takes 2 characters.
   - Remember that, in this implementation of the searching script, quotation marks take 2 characters rather than 1; this is because you need to use a backslash ("\\") before the quotation marks. This is true except for the main-query quotation marks.
   - In order to save characters, don't use quotation marks on individual words.
+  - Beware of formating, e.g., quotation marks should be straight "" and not curved “”.
 
 ### Examples
 ---
