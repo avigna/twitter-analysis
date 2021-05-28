@@ -103,7 +103,7 @@ fi
 ```
 
 In order to choose the timeframe for the query, one must choose between a `test`, a `date` or an `archive` search.
-The `test` search looks for 12 hrs of Twitter data in order to get a small but representative sample of a query.
+The `test` search looks for 12 hrs of archival Twitter data in order to get a small but representative sample of a query.
 The `date` search looks for user defined start and end times to do the search.
 Finally, the `archive` search looks for all of Twitter data.
 The part of the script that deals with the time frame looks like the following:
