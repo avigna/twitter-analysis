@@ -1,5 +1,12 @@
 # twitter-analysis
 
+<!-- ## Contents
+ - [Overview](#Overview)
+ - [Queries](#Queries)
+ - [Resources](#Resources)
+ - [Contact](#Contact)
+ - [License](#License) -->
+
 ## Overview
 The purpose of this public repository is to do collection and analysis of Twitter data.
 In the current version, the repository consists uniquely on scripts that search and save Tweets in .jsonl format. 
@@ -10,7 +17,7 @@ For that we will need to install one of the following two packages:
 Additionally, the file /twitter-analysis/scripts/readJsonlFiles.ipynb is a jupyter notebook to make quick searches and queries through any .jsonl file.
 
 
-## Queries: basics and resources
+## Queries: basics, tips, and examples
 This repository was created following the release of Twitter's [Academic Research product track](https://developer.twitter.com/en/solutions/academic-research).
 The main advantage or the Academic Research product track is that you get full access to archival data. 
 It seems that it includes deleted and private tweets, but an official reference is needed to backup this statement.
@@ -68,10 +75,12 @@ Example 4:
 #### Query: "(\\"Kendrick Lamar\\" OR \\"Kanye West\\" OR \\"Jay-Z\\") (😍 OR 😘) (lang:es) (place_country:MX) (-is:retweet)"
 
 ---
+
+## Scripts
 ### How to use the /twitter-analysis/scripts/twarcScript.sh shell script?
 SECTION PENDING.
 
-### Resources
+## Resources
 [Learn twarc](https://scholarslab.github.io/learn-twarc/): mostly for v1, but some overlap with v2. Hopefully a complete and robust documentation for v2 soon.
 
 https://twittercommunity.com/: forums of users discussing their experiences, questions, and solutions while data mining on Twitter.
