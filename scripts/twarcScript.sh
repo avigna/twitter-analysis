@@ -7,8 +7,9 @@
 start=$SECONDS
 
 # QUERY
-queryString="(\"Kendrick Lamar\" (😍 OR 😘)) -is:retweet"
-queryString=$queryString
+# queryString="(\"Kendrick Lamar\" (😍 OR 😘)) (-is:retweet)"
+value=`cat queryStringFile.txt`
+queryString=$value
 echo "Query:"
 echo "$queryString"
 echo
