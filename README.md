@@ -79,7 +79,7 @@ Example 4:
 ## Scripts
 The main script to do queries is located on `/twitter-analysis/scripts/twarcScript.sh`.
 The function of the script if to do a specific query on a certain time frame and store the results in a jsonl file.
-There are two query options: inline and file queries.
+There are two query options: `inline` and `file` queries.
 The inline query searches for whatever is specified as a `queryString` in the `twarcScript.sh`.
 The file query reads the content of `/twitter-analysis/scripts/queryStringFile.txt` and uses it to do the query.
 The part of the script that deals with the content of the query looks like the following:
