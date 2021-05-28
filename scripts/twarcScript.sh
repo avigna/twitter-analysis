@@ -7,9 +7,21 @@
 start=$SECONDS
 
 # QUERY
-# queryString="(\"Kendrick Lamar\" (😍 OR 😘)) (-is:retweet)"
-value=`cat queryStringFile.txt`
-queryString=$value
+# Either inline or file
+queryOption="file"
+if [ $queryOption == "inline" ]
+then
+   queryString="(\"Kendrick Lamar\" (COMPTON) (😍 OR 😘)) (-is:retweet)"
+   queryString=$queryString
+elif [ $queryOption == "file" ]
+then
+   value=`cat queryStringFile.txt`
+   queryString=$value
+else
+   echo "None of the condition met"
+   queryString=""
+fi
+
 echo "Query:"
 echo "$queryString"
 echo
