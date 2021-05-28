@@ -77,8 +77,48 @@ Example 4:
 ---
 
 ## Scripts
-### How to use the /twitter-analysis/scripts/twarcScript.sh shell script?
-SECTION PENDING.
+The main script to do queries is located on `/twitter-analysis/scripts/twarcScript.sh`.
+The function of the script if to do a specific query on a certain time frame and store the results in a jsonl file.
+There are two query options: inline and file queries.
+The inline query searches for whatever is specified as a `queryString` in the `twarcScript.sh`.
+The file query reads the content of `/twitter-analysis/scripts/queryStringFile.txt` and uses it to do the query.
+The part of the script that deals with the content of the query looks like the following:
+
+```
+# QUERY
+# Either inline or file
+queryOption="inline"
+if [ $queryOption == "inline" ]
+then
+   queryString="(\"Kendrick Lamar\" (COMPTON) (😍 OR 😘)) (-is:retweet)"
+   queryString=$queryString
+elif [ $queryOption == "file" ]
+then
+   value=`cat queryStringFile.txt`
+   queryString=$value
+else
+   echo "None of the condition met."
+   queryString=""
+fi
+```
+
+In order to choose the timeframe for the query, one must choose between a `test`, a `date` or an `archive` search.
+The `test` search looks for 12 hrs of Twitter data in order to get a small but representative sample of a query.
+The `date` search looks for user defined start and end times to do the search.
+Finally, the `archive` search looks for all of Twitter data.
+The part of the script that deals with the time frame looks like the following:
+
+```
+# TIMEFRAME
+# Either "test", "date" or "archive"
+timeframeOption="test"
+# If using timeframeOption="date", specify:
+startTimeString="2021-01-01T00:00:00"
+endTimeString="2021-04-01T00:00:00"
+```
+
+Where the `startTimeString` and `endTimeString` are only used when `timeframeOption="date"`.
+
 
 ## Resources
 [Learn twarc](https://scholarslab.github.io/learn-twarc/): mostly for v1, but some overlap with v2. Hopefully a complete and robust documentation for v2 soon.
