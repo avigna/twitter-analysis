@@ -8,7 +8,7 @@ start=$SECONDS
 
 # QUERY
 # Either inline or file
-queryOption="file"
+queryOption="inline"
 if [ $queryOption == "inline" ]
 then
    queryString="(\"Kendrick Lamar\" (COMPTON) (😍 OR 😘)) (-is:retweet)"
@@ -18,7 +18,7 @@ then
    value=`cat queryStringFile.txt`
    queryString=$value
 else
-   echo "None of the condition met"
+   echo "None of the condition met."
    queryString=""
 fi
 
@@ -64,7 +64,8 @@ then
   --flatten \
   > $fileNameString   
 else
-   echo "None of the condition met"
+   echo "None of the condition met."
+   echo "No search done."
 fi
 
 # TIME
