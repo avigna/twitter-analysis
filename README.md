@@ -82,6 +82,7 @@ The function of the script if to do a specific query on a certain time frame and
 There are two query options: `inline` and `file` queries.
 The `inline` query searches for whatever is specified as a `queryString` in the `twarcScript.sh`.
 The `file` query reads the content of `/twitter-analysis/scripts/queryStringFile.txt` and uses it to do the query.
+*CAUTION*: The `file` option is currently faulty.
 The part of the script that deals with the content of the query looks like the following:
 
 ```
