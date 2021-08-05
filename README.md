@@ -11,8 +11,7 @@
 The purpose of this public repository is to do collection and analysis of Twitter data.
 In the current version, the repository consists uniquely on scripts that search and save Tweets in .jsonl format. 
 For that we will need to install one of the following two packages:
-  - [Twarc2](https://twarc-project.readthedocs.io/en/latest/twarc2/): this package, which we suggest to use as default, need to be installed in order to make Tweet queries using the shell script /twitter-analysis/scripts/twarcScript.sh.
-  - [searchtweets-v2](https://pypi.org/project/searchtweets-v2/): alternatively, this package can be installed to make Tweet queries using the python scripts in /twitter-analysis/scripts/searchtweets/. However, it has been proven to be less reliable than other packages, and might be soon deprecated and deleted. For now, we keep it as an alternative.
+  - [Twarc v2.3.12](https://twarc-project.readthedocs.io/en/latest/twarc2/): this package, which we suggest to use as default, need to be installed in order to make Tweet queries using the shell script /twitter-analysis/scripts/twarcScript.sh.
 
 Additionally, the file /twitter-analysis/scripts/readJsonlFiles.ipynb is a jupyter notebook to make quick searches and queries through any .jsonl file.
 
@@ -23,7 +22,7 @@ The main advantage or the Academic Research product track is that you get full a
 It seems that it includes deleted and private tweets, but an official reference is needed to backup this statement.
 While this is a powerful tool and gives access to a lot of data, the main problem with it is that it comes under [Twitter API v2](https://developer.twitter.com/en/docs/twitter-api/early-access).
 Twitter API v2 will eventually be a great tool, but it is currently under developement.
-This means that a lot of the resources, tools and syntax that are commonly used in v1 are, currently, either not as robuts or not accessible at all.
+This means that a lot of the resources, tools and syntax that are commonly used in v1 are, currently, either not as robust or not accessible at all.
 This might eventually be addressed by the developers, but it currently results in a warning for any user using this repository and any reference to resources based on v1.
 
 ### Basics
