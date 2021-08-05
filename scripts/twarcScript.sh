@@ -30,11 +30,12 @@ echo
 # Either "test", "date" or "archive"
 timeframeOption="test"
 # If using timeframeOption="date", specify:
-startTimeString="2021-01-01T00:00:00"
-endTimeString="2021-04-01T00:00:00"
+startTimeString="2020-12-01T05:00:00"
+endTimeString="2021-06-01T05:00:00"
+
 
 # FILENAME
-fileNameString="testRT.jsonl" # Ignored when timeframeOption="test"
+fileNameString="date_test.jsonl" # Ignored when timeframeOption="test"
 
 # TWARC SEARCH
 if [ $timeframeOption == "test" ]
@@ -42,7 +43,6 @@ then
    echo "Timeframe: test"
    twarc2 search "$queryString" \
   --archive \
-  --flatten \
   --start-time "2020-01-01T00:00:00" \
   --end-time "2020-01-01T12:00:00" \
   > "test.jsonl"
@@ -50,18 +50,18 @@ then
 elif [ $timeframeOption == "date" ]
 then
    echo "Timeframe: date"
+   echo "From $startTimeString to $endTimeString"
    twarc2 search "$queryString" \
   --archive \
-  --flatten \
   --start-time $startTimeString \
   --end-time $endTimeString \
   > $fileNameString
 elif [ $timeframeOption == "archive" ]
 then
    echo "Timeframe: archive"
+   echo "WARNING: this might be a long search"
    twarc2 search "$queryString" \
   --archive \
-  --flatten \
   > $fileNameString   
 else
    echo "None of the condition met."
