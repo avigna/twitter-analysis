@@ -41,6 +41,7 @@ fileNameString="date_test.jsonl" # Ignored when timeframeOption="test"
 if [ $timeframeOption == "test" ]
 then
    echo "Timeframe: test"
+   echo "Running..."
    twarc2 search "$queryString" \
   --archive \
   --start-time "2020-01-01T00:00:00" \
@@ -51,6 +52,7 @@ elif [ $timeframeOption == "date" ]
 then
    echo "Timeframe: date"
    echo "From $startTimeString to $endTimeString"
+   echo "Running..."
    twarc2 search "$queryString" \
   --archive \
   --start-time $startTimeString \
@@ -60,6 +62,7 @@ elif [ $timeframeOption == "archive" ]
 then
    echo "Timeframe: archive"
    echo "WARNING: this might be a long search"
+   echo "Running..."
    twarc2 search "$queryString" \
   --archive \
   > $fileNameString   
