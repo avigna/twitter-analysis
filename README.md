@@ -121,6 +121,8 @@ Where the `startTimeString` and `endTimeString` are only used when `timeframeOpt
 
 
 ## Resources
+[Twitter analysis using this repo](https://www.eluniversal.com.mx/opinion/ingrid-alvarez/diplomacia-digital-de-ministros-tweets-y-bots): newspaper column using Twitter data to analyse a particular event surrounding Mexican politics (Spanish). See also this [Tweet](https://twitter.com/alejandro_vigna/status/1443571108922363916) for a high-resolution plot.
+
 [Learn twarc](https://scholarslab.github.io/learn-twarc/): mostly for v1, but some overlap with v2. Hopefully a complete and robust documentation for v2 soon.
 
 https://twittercommunity.com/: forums of users discussing their experiences, questions, and solutions while data mining on Twitter.
